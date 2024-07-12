@@ -1,0 +1,45 @@
+# change the followings to match your Github username and repo name
+# baseurl: "/wip-almanacs" # the name of your github repo
+# url: "https://BCDigSchol.github.io" # the url of your github pages
+
+# site information used in page title, meta data etc.
+title: "CATHOLIC ALMANACS"
+description: Jekyll site for the Catholic Almanac Project @ Boston College
+
+# color theme for links
+theme-color: indigo # indigo|yellow|pink|green|stone|
+
+# nav bar settings and links
+nav-menu:
+  - title: Home
+    link: index
+  - title: About
+    link: about
+  - title: Contributors
+    link: contributors
+  - title: Contact
+    link: contact
+
+# sets whether a search bar appears on the site header
+# NOTE, you will have to increase the site of teh $site-header-height in _sass/theme-settings.scss to to see the search bar
+search-bar: false
+
+hide-footer: false # set to true to hide the footer
+footer-message: Digital Scholarship Group | Boston College Libraries
+# footer-submessage:  By Chase Hockema, with the Digital Scholarship Group, Boston College
+footer-submessage-link: https://ds.bc.edu
+
+# google-analytics: // if you want to use Google analytics, include your ID here
+
+# sets number of items display per page, if using a blog
+paginate: 5
+
+include:
+  - _pages
+
+# jekyll plugins - no need to change
+plugins:
+    - jekyll-seo-tag
+    - jekyll-feed
+    - jekyll-paginate
+    - jekyll-postcss-v2

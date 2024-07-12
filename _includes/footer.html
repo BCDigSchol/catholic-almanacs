@@ -1,0 +1,18 @@
+<footer class="w-full flex flex-col justify-start items-center">
+    <div class="w-full footer-container flex flex-col justify-center items-center card">
+        <div class="w-full text-center p-4">
+            {{ site.footer-message }}
+        </div>
+        {% if site.footer-submessage %}
+            <div class="w-full text-center subfooter-container p-2 flex flex-col justify-start items-center">
+                {% if site.footer-submessage-link %}
+                    <a href="{{ site.footer-submessage-link }}" target="_blank">
+                {% endif %}
+                {{ site.footer-submessage }}
+                {% if site.footer-submessage-link %}
+                    </a>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</footer>

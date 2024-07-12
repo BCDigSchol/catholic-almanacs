@@ -1,0 +1,49 @@
+<head>
+    <!-- google analytics -->
+    {% if site.google-analytics %}
+      {% include google-analytics.html %}
+    {% endif %}
+  
+    <!-- Jekyll SEO plugin -->
+    {% seo %}
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ site.title }}</title>
+  
+    <!-- TailwindCSS and Inter Font-->
+    <link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "assets/css/tailwind.css" | relative_url }}">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <!-- Simple-Jekyll-Search -->
+    <script src="{{ "assets/js/simple-jekyll-search.min.js" | relative_url }}"></script>
+  
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="{{ "assets/css/fontawesome/fontawesome.min.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "assets/css/fontawesome/solid.min.css" | relative_url }}">
+    
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="{{ "assets/css/highlightjs-github-dark-dimmed.css" | relative_url }}">
+    <script src="{{ "assets/js/highlight.min.js" | relative_url }}"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- soundcite -->
+    <link rel="stylesheet" href="{{ "assets/css/soundcite.css" | relative_url }}">
+    <script src="{{ "assets/js/soundcite.min.js" | relative_url }}"></script>
+    
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        chtml: {
+          fontURL: "{{ "assets/webfonts/mathjax" | relative_url }}"
+        }
+      };
+    </script>
+    <script src="{{ "assets/js/polyfill.min.js" | relative_url }}"></script>
+    <script src="{{ "assets/js/mathjax.js" | relative_url }}"></script>
+
+</head>

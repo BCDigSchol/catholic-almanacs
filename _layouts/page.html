@@ -1,0 +1,26 @@
+---
+layout: default
+show-title: true
+---
+<div class="w-full flex flex-col justify-start items-center">
+
+  {% if page.featured-img %}
+    {% if page.featured-img-border %}
+      <div class="w-full border border-solid border-black">
+    {% else %}
+      <div class="w-full">
+    {% endif %}
+        <img class="w-full object-cover" src="{{ page.featured-img | relative_url }}" />
+    </div>
+  {% endif %}
+
+  {% if page.show-title %}
+    <h1 class="w-full text-center mt-6 mb-6 text-3xl title-font">{{ page.title }}</h1>
+  {% endif %}
+
+    <div class="mt-6 w-full flex flex-col justify-start items-center">
+        <div class="w-full page-content prose-headings prose prose-{{site.theme-color}}">
+          {{content}}
+        </div>
+      </div>
+</div>

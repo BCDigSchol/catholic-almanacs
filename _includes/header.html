@@ -1,0 +1,109 @@
+<header class="w-full flex flex-col justify-start items-center">
+    <!-- medium to larger screens header (invisible on mobile) -->
+    <div class="normal-header w-full header-container card flex flex-col justify-center items-center">
+        <div class="w-full title-font p-2 text-center flex flex-col justify-center items-center">
+            <a class="tracking-widest" href="{{site.baseurl}}/">
+                {{ site.title }}
+            </a>
+        </div>
+        <div class="nav-bar w-full flex flex-row justify-around items-center py-2 px-10 header-nav-bar">
+            {% for menu_item in site.nav-menu %}
+                <!-- put dropdown container if submenu exists -->
+                {% if menu_item.submenu %}
+                    <div class="dropdown">
+                {% endif %}
+                <span>
+                    {% if menu_item.link %}
+                        <a href="{{ menu_item.link }}">
+                            {{ menu_item.title }}
+                        </a>
+                    {% else %}
+                        {{ menu_item.title }}
+                    {% endif %}
+                    </span>
+                {% if menu_item.submenu %}
+                    <div class="dropdown-content text-center">
+                        {% for submenu_item in menu_item.submenu %}
+                            <a href="{{ site.baseurl }}/{{ submenu_item.link }}">
+                                {{ submenu_item.title }}
+                            </a>
+                            {% if forloop.last == false %}
+                                <hr />
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                <!-- close dropdown container -->
+                {% if menu_item.submenu %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% if site.search-bar %}
+            <div class="p-2 w-full">
+                <div class="search-bar">
+                    <input class="w-full my-3 p-2" type="text" id="search-input" placeholder="Search...">
+                    <ul id="results-container"></ul>
+                  
+                    <!-- Configuration -->
+                    <script>
+                      SimpleJekyllSearch({
+                        searchInput: document.getElementById('search-input'),
+                        resultsContainer: document.getElementById('results-container'),
+                        json: "{{ 'search.json' | relative_url }}" ,
+                        searchResultTemplate: '<li><a href="{{ site.url }}/{url}">{title}</a></li>'
+                      })
+                    </script>
+                </div>
+            </div>
+            {% endif %}
+    </div>
+    <!-- xs to small screens (mobile, invisible to desktop) -->
+    <div class="mobile-header w-full header-container card flex-row justify-start items-center p-2">
+        <div class="title-font">
+            <a class="tracking-widest" href="{{site.baseurl}}/">
+                {{ site.title }}
+            </a>
+        </div>
+        <div class="mobile-nav-dropdown-button">
+            <i class="fa-solid fa-bars"></i>
+
+            <div class="nav-dropdown-content text-center flex flex-col justify-start items-center">
+                {% for menu_item in site.nav-menu %}
+                    <!-- put dropdown container if submenu exists -->
+                    {% if menu_item.submenu %}
+                        <div class="dropdown">
+                    {% endif %}
+                    <span>
+                        {% if menu_item.link %}
+                            <a href="{{ menu_item.link }}">
+                                {{ menu_item.title }}
+                            </a>
+                        {% else %}
+                            {{ menu_item.title }}
+                        {% endif %}
+                        </span>
+                    {% if menu_item.submenu %}
+                        <div class="dropdown-content text-center">
+                            {% for submenu_item in menu_item.submenu %}
+                                <a href="{{ site.baseurl }}/{{ submenu_item.link }}">
+                                    {{ submenu_item.title }}
+                                </a>
+                                {% if forloop.last == false %}
+                                    <hr />
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    <!-- close dropdown container -->
+                    {% if menu_item.submenu %}
+                        </div>
+                    {% endif %}
+                    {% if forloop.last == false %}
+                        <hr />
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</header>

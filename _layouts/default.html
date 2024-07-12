@@ -1,0 +1,65 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: " en-US" }}">
+
+{%- include head.html -%}
+
+<body class="w-full h-full flex flex-col justify-start items-center">
+  <!-- wrapper for site, which limits max-w-->
+  <div class="w-full h-full flex flex-col justify-start items-center site-wrapper">
+    {%- include header.html -%}
+    <div class="w-full h-full flex flex-col justify-start items-center content-wrapper">
+      <div class="w-full content-container">
+        {{ content }}
+      </div>
+    </div>
+    <!-- supresses footer if site-wide footer supression is set -->
+    {% if site.hide-footer != true %}
+      <!-- supresses footer if page-level footer supression is set-->
+      {% if page.hide-footer != true %}
+        {%- include footer.html -%}
+      {% endif %}
+    {% endif %}
+  </div>
+</body>
+
+<script>
+  /* Funtion for getting the current year in the footer */
+  (function () {
+    if (document.getElementById("get-current-year")) {
+      document.getElementById(
+        "get-current-year"
+      ).innerHTML = new Date().getFullYear();
+    }
+  })();
+
+  /* Function for opning navbar on mobile */
+  function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+    /* Function for dropdowns */
+    function openDropdown(event, dropdownID) {
+      let element = event.target;
+      while (element.nodeName !== "A") {
+        element = element.parentNode;
+      }
+      document.getElementById(dropdownID).classList.toggle("hidden");
+      document.getElementById(dropdownID).classList.toggle("block");
+    }
+
+  /* Function for show/hide table of content */
+  function toggleTOC() {
+    var toc = document.getElementById('toc');
+        if (toc.style.display == "block"){ // if toc hidden, display it 
+            toc.style.display = "none";
+        }
+        else{ // if toc displayed, hidden it
+            toc.style.display = "block";
+        }
+    }
+</script>
+
+</html>

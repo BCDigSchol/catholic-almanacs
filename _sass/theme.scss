@@ -1,0 +1,391 @@
+@import "theme-settings";
+
+a {
+    color: $link-base-color !important;
+}
+  
+a:visited {
+    color: $link-visited-color !important;
+}
+  
+a:hover {
+    color: $link-hover-color !important;
+}
+
+body {
+    font-family: $body-font-family, $body-font-style !important;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: $site-frame-color;
+    color: $body-text-color !important;
+}
+
+p {
+    color: $body-text-color !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $title-font-family, $title-font-style !important;
+}
+  
+.title-font {
+    font-family: $title-font-family, $title-font-style !important;
+    font-weight: 600;
+    font-style: normal;
+    height: 100%;
+}
+
+.title-font a, .title-font a:visited {
+    color: $site-title-color !important;
+}
+
+.title-font a:hover {
+    color: $link-header-base-color !important;
+}
+
+pre {
+    background-color: $code-block-color !important;
+}
+  
+/* Settings for header and body to make fixed site header */
+header {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+}
+
+/* a element settings for the header */
+header a, header a:visited {
+    color: $link-header-base-color !important;
+}
+  
+header a:hover {
+    color: $link-header-hover-color !important;
+}
+
+footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    z-index: 999;
+}
+
+/* a element settings for the header */
+footer a, footer a:visited {
+    color: $link-footer-base-color !important;
+}
+  
+footer a:hover {
+    color: $link-footer-hover-color !important;
+}
+
+.site-wrapper {
+    max-width: $site-max-width;
+    background-color: $site-background-color;
+    background-size: 100%;
+}
+
+.header-container {
+    max-width: $site-max-width;
+    color: $header-text-color !important;
+    background: linear-gradient($site-header-color, $site-header-color), url('/assets/img/header.png') no-repeat center center;
+    background-size: 100%;
+}
+
+.footer-container {
+    max-width: $site-max-width;
+    background-color: $site-footer-color;
+    color: $footer-text-color;
+}
+
+.subfooter-container {
+    background-color: $site-accent-color;
+}
+
+/* position and width  of the page body content */
+.content-wrapper {
+    position: absolute;
+    left: 0px;
+}
+
+.content-container {
+    max-width: $site-max-width;
+    padding-bottom: calc(10px + #{$site-footer-height});
+    background-color: $site-background-color;
+    // wrap text to avoid overflowing parent container
+    word-wrap: break-word; /* For older browsers */
+    overflow-wrap: break-word; /* For newer browsers */
+}
+
+/* Settings for the search bar */
+.search-bar {
+    background-color: $search-bar-background;
+    border-color: $search-bar-border;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 0px 2px 0px 2px;
+}
+
+.search-bar input {
+    border-radius: 5px;
+    padding: 2px 4px 2px 4px;
+    margin: 2px;
+}
+
+.search-bar a:link, .search-bar a:hover, .search-bar a:visited, .search-bar ul {
+    color: $search-bar-results !important;
+}
+
+/* Used to make various elements 'float' with a shadow */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button {
+    background-color: $site-header-color;
+    color: $link-header-base-color;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button a, header a:visited {
+    color: $link-header-base-color !important;
+    text-decoration: none;
+}
+  
+.button a:hover {
+    color: $link-header-hover-color !important;
+    text-decoration: none;
+}
+
+/* Used for regular dropdown menus*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $site-background-color;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a, .dropdown-content a:visited {
+    color: $link-dropdown-base-color !important;
+}
+
+.dropdown-content a:hover {
+    color: $link-dropdown-hover-color !important;
+}
+
+/**
+   * Pagination navbar
+   */
+   .pagination {
+    li {
+      a, div {
+        min-width: 41px;
+        text-align: center;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+      div {
+        display: block;
+        border: 1px solid transparent;
+        border-radius: 10px;
+  
+        &.pager-edge {
+          color: #000000;
+          border: 1px dashed;
+        }
+      }
+    }
+  }
+
+.site-title-nav a, .site-title-nav a:visited {
+    color: $link-header-base-color !important;
+}
+  
+.site-title-nav a:hover {
+    color: $link-header-hover-color !important;
+}
+
+p.bibliography {
+    margin-left: 2em;
+    text-indent: -2em;
+    // wrap text to avoid overflowing parent container
+    word-wrap: break-all; /* For older browsers */
+    overflow-wrap: break-all; /* For newer browsers */
+}
+
+p.bibliography a {
+    text-decoration: none;
+}
+
+.prose {
+    max-width: 100ch !important;
+}
+
+.featured-img {
+    transition: 1s
+}
+
+.mobile-nav-dropdown-button {
+    position: relative;
+}
+  
+.mobile-nav-dropdown-button .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $site-header-mobile-dropdown-menu-color;
+    color: $mobile-dropdown-menu-text-color;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    right: 0px;
+    top: 0px;
+}
+  
+.mobile-nav-dropdown-button:hover .nav-dropdown-content {
+    display: flex;
+}
+
+.nav-dropdown-content a, .nav-dropdown-content a:visited {
+    color: $mobile-dropdown-menu-text-color !important;
+}
+
+.nav-dropdown-content a:hover {
+    color: $link-dropdown-hover-color !important;
+}
+
+// deal with dropdown menus inside the nav dropdown menu
+.mobile-nav-dropdown-button .nav-dropdown-content .dropdown .dropdown-content a,  .mobile-nav-dropdown-button .nav-dropdown-content .dropdown .dropdown-content a:visited {
+    color: $body-text-color !important;
+}
+
+.mobile-nav-dropdown-button .nav-dropdown-content .dropdown .dropdown-content a:hover {
+    color: $link-dropdown-hover-color !important;
+}
+
+.mobile-nav-dropdown-button .nav-dropdown-content .dropdown .dropdown-content {
+    top: 0px;
+    right: 0px;
+}
+
+// alternatives for mobile settings
+@media screen and (min-width: 769px) {
+
+    .content-wrapper {
+        top: $site-header-height;
+    }
+
+    .title-font {
+        font-size: 80px;
+        text-shadow: 2px 2px #000000;
+    }
+
+    .header-container {
+        height: $site-header-height;
+    }
+    
+    .footer-container {
+        height: $site-footer-height;
+    }
+
+    .nav-bar {
+        font-size: 100%;
+    }
+
+    .page-content {
+        padding: 10px 10px 10px 10px;
+    }
+
+    .normal-header {
+        display: flex;
+    }
+
+    .mobile-header {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 401px) {
+
+    .content-wrapper {
+        top: $site-header-height-mobile;
+    }
+
+    .title-font {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .footer-container {
+        height: $site-footer-height-mobile;
+        font-size: 75%;
+    }
+
+    .nav-bar {
+        font-size: 75%;
+    }
+
+    .page-content {
+        padding: 10px 10px 10px 10px;
+    }
+
+    .normal-header {
+        display: none !important;
+    }
+
+    .mobile-header {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .content-wrapper {
+        top: $site-header-height-mobile;
+    }
+
+    .title-font {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .header-container {
+        height: $site-header-height-mobile;
+    }
+    
+    .footer-container {
+        height: $site-footer-height-mobile;
+        font-size: 50%;
+    }
+
+    .nav-bar {
+        font-size: 50%;
+    }
+
+    .page-content {
+        padding: 15px 15px 15px 15px;
+    }
+
+    .normal-header {
+        display: none !important;
+    }
+
+    .mobile-header {
+        display: flex;
+    }
+}
