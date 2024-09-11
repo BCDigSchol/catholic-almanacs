@@ -26,6 +26,16 @@ show-title: true
 <h4>Encoding Locations</h4>
 
 <p>We derived addresses from information given in the almanac; sometimes that included detailed information like cross-streets, and sometimes that was simply a town name.  We then used Awesome Geocoder to create coordinates based on those addresses.  When no coordinates could be generated--usually because the town is defunct--our team did additional research to find the coordinates of the institution.  To that end, the level of precision in locations identified varies by region, especially when a town is defunct.  Sometimes we could find a historical marker with exact coordinates of a location, and other times we had to create a somewhat arbitrary point nearby a named creek, for example.  When we did research, we also included links to the information sources we used to find the information.  In the future, we hope to create a process where those who are more knowledgeable about specific regions can send us updated location information to make our data as accurate as possible.</p>
+<p>The fields we have for locations are as follows:</p>
+<ul>
+  <li>Place Name: any address or place information provided by the almanac, ranging from "the corner of 4th and Front Streets" to "near the school house."</li>
+  <li>Original County: the original county listed in the almanac, if given (usually in more rural areas)</li>
+  <li>Regularized County: the county the institution is in today, which is occasionally different, if identified (sometimes only marked if counties in teh dioceses changed)</li>
+    <li>Original City: the original city name listed in the almanac, if given</li>
+      <li>Regularized City: the city the institution is in today, which is sometimes different. If the town is defunct and no replacement has sprung up, the current city is left blank.</li>
+    <li>Original State: the original state listed in the almanac</li>
+  <l>Regularized State: the state the institution is in today, which is very rarely different (usually in Western territories-turned-states and West Virginia vs. Virginia)</li>
+</ul>
 
 <h4>Encoding Individuals</h4>
 
