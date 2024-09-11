@@ -7,34 +7,29 @@ show-title: true
 
 <h3>The Project</h3>
 
-<p>As part of BC Libraries Catholic Collections Initiative, the Digital Scholarship Group is making Catholic almanac data from the 19th century United States more widely available and searchable. Each almanac includes a list of all the institutions in each of the country’s dioceses–every elementary and secondary school; every university and college; and every hospital, orphanage, and asylum that was under a diocese’s supervision. Rather than telling the story of the predominately white, male Catholic leadership only, these almanacs record a bottom-up social history of Catholic people and organizations of all stripes in the 19th century United States.</p>
-<p>The project transforms this dense list of institution names, places, and people into a story users can see.  Our current centerpiece is a map of all the institutions and how they change over time as new churches form and the boundaries of dioceses expand.  We also want users to be able to search for individuals and institutions to see what the almanacs say about them, and eventually to connect to other existing data about those people and organizations. </p>
+<p>The project transforms a dense list of institution names, places, and people featured in nineteenth-century Catholic almanacs into a social history users can see.  Our current centerpiece is a map of all the institutions and how they change over time as new churches form and the boundaries of dioceses expand.  We also want users to be able to search for individuals and institutions to see what the almanacs say about them, and eventually to connect to other existing data about those people and organizations. </p>
 
 
 <h3>The Original Data Creation Process</h3>
 
-<p>In the Spring and Summer of 2024, a team of outstanding BC humanities students under the direction of Ashlyn Stewart undertook the crucial and unglamorous transcribing and encoding work required to launch the project. Using an encoding language called XML, the students tagged (and, thus, structured) each institution’s name, place, and affiliates for the 1870 almanac.  We then transformed the data into a .csv format to power our visualizations more easily.  Some of our most important data encoding and structuring decisions are described below.</p>
+<p>In the Spring and Summer of 2024, a team of outstanding BC humanities students under the direction of Ashlyn Stewart undertook the crucial and unglamorous transcribing and encoding work required to launch the project.  The students tagged (and, thus, structured) each institution’s name, place, and affiliates for the 1870 almanac in XML format.  We then transformed the XML data into a .csv format to power our visualizations more easily.  Some of our most important data encoding and structuring decisions are described below.</p>
 
 <h4>Institutions We Encoded</h4>
 
-<p></p>
-
-<h4>Institution Names</h4>
-
-<p></p>
+<p>We encoded nearly every US institution named in the Almanacs.  These included churches, chapels, missions, and stations; K-12 day and boarding schools, schools for boys and for girls, colleges, universities, and other more specialized educational institutions; convents, monestaries, and other religious assocations; hospitals, orphanages, and aslyums.  In our first iteration, we opted not to encode the occasional religious or charitable society when it had no location information.  We might revisit theses societies in the future when our focus is less on the map and more on a searchable repository of information.</p>
 
 <h4>Encoding Locations</h4>
 
-<p>We derived addresses from information given in the almanac; sometimes that included detailed information like cross-streets, and sometimes that was simply a town name.  We then used Awesome Geocoder to create coordinates based on those addresses.  When no coordinates could be generated--usually because the town is defunct--our team did additional research to find the coordinates of the institution.  To that end, the level of precision in locations identified varies by region, especially when a town is defunct.  Sometimes we could find a historical marker with exact coordinates of a location, and other times we had to create a somewhat arbitrary point nearby a named creek, for example.  When we did research, we also included links to the information sources we used to find the information.  In the future, we hope to create a process where those who are more knowledgeable about specific regions can send us updated location information to make our data as accurate as possible.</p>
+<p>We included the location of every institution in the almanacs in our dataset so that we could geospatially visualize the array of institutions across the United States.  We derived addresses from information given in the almanac; sometimes that included detailed information like cross-streets, and sometimes that was simply a town name.  We then used a <a href="https://workspace.google.com/marketplace/app/geocode_by_awesome_table/904124517349">Geocoder developed by AwesomeTable</a> to create coordinates based on those addresses.  When no coordinates could be generated&#8212;usually because the town is defunct&#8212;our team did additional research to find the coordinates of the institution.  To that end, the level of precision in locations identified varies by region, especially when a town is defunct.  Sometimes we could find a historical marker with exact coordinates of a location, and other times we had to create a somewhat arbitrary point nearby a named creek, for example.  When we did research, we also included links to the information sources we used to find the information.  In the future, we hope to create a process where those who are more knowledgeable about specific regions can send us updated location information to make our data as accurate as possible.</p>
 <p>The fields we have for locations are as follows:</p>
 <ul>
   <li>Place Name: any address or place information provided by the almanac, ranging from "the corner of 4th and Front Streets" to "near the school house."</li>
   <li>Original County: the original county listed in the almanac, if given (usually in more rural areas)</li>
-  <li>Regularized County: the county the institution is in today, which is occasionally different, if identified (sometimes only marked if counties in teh dioceses changed)</li>
+  <li>Regularized County: the county the institution is in today, which is occasionally different, if identified (sometimes only marked if counties in the dioceses changed)</li>
     <li>Original City: the original city name listed in the almanac, if given</li>
       <li>Regularized City: the city the institution is in today, which is sometimes different. If the town is defunct and no replacement has sprung up, the current city is left blank.</li>
     <li>Original State: the original state listed in the almanac</li>
-  <l>Regularized State: the state the institution is in today, which is very rarely different (usually in Western territories-turned-states and West Virginia vs. Virginia)</li>
+  <li>Regularized State: the state the institution is in today, which is very rarely different (usually in Western territories-turned-states and West Virginia vs. Virginia)</li>
 </ul>
 
 <h4>Encoding Individuals</h4>
