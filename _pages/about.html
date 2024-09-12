@@ -12,34 +12,4 @@ show-title: true
 
 <h3>The Original Data Creation Process</h3>
 
-<p>In the Spring and Summer of 2024, a team of outstanding BC humanities students under the direction of Ashlyn Stewart undertook the crucial and unglamorous transcribing and encoding work required to launch the project.  The students tagged (and, thus, structured) each institution’s name, place, and affiliates for the 1870 almanac in XML format.  We then transformed the XML data into a .csv format to power our visualizations more easily.  All of our data will soon be available in our GitHub repository as a series of spreadsheets.  Some of our most important data encoding and structuring decisions are described below.</p>
-
-<h4>Institutions We Encoded</h4>
-
-<p>We encoded nearly every US institution named in the Almanacs.  These included churches, chapels, missions, and stations; K-12 day and boarding schools, schools for boys and for girls, colleges, universities, and other more specialized educational institutions; convents, monestaries, and other religious assocations; hospitals, orphanages, and aslyums.  In our first iteration, we opted not to encode the occasional religious or charitable society when it had no location information.  We might revisit theses societies in the future when our focus is less on the map and more on a searchable repository of information.</p>
-
-<h4>Encoding Locations</h4>
-
-<p>We included the location of every institution in the almanacs in our dataset so that we could geospatially visualize the array of institutions across the United States.  We derived addresses from information given in the almanac; sometimes that included detailed information like cross-streets, and sometimes that was simply a town name.  We then used a <a href="https://workspace.google.com/marketplace/app/geocode_by_awesome_table/904124517349">Geocoder developed by AwesomeTable</a> to create coordinates based on those addresses.  When no coordinates could be generated&#8212;usually because the town is defunct&#8212;our team did additional research to find the coordinates of the institution.  To that end, the level of precision in locations identified varies by region, especially when a town is defunct.  Sometimes we could find a historical marker with exact coordinates of a location, and other times we had to create a somewhat arbitrary point nearby a named creek, for example.  When we did research, we also included links to the information sources we used to find the information.  In the future, we hope to create a process where those who are more knowledgeable about specific regions can send us updated location information to make our data as accurate as possible.</p>
-<p>The fields we have for locations are as follows:</p>
-<ul>
-  <li>Place Name: any address or place information provided by the almanac, ranging from "the corner of 4th and Front Streets" to "near the school house."</li>
-  <li>Original County: the original county listed in the almanac, if given (usually in more rural areas)</li>
-  <li>Regularized County: the county the institution is in today, which is occasionally different, if identified (sometimes only marked if counties in the dioceses changed)</li>
-    <li>Original City: the original city name listed in the almanac, if given</li>
-      <li>Regularized City: the city the institution is in today, which is sometimes different. If the town is defunct and no replacement has sprung up, the current city is left blank.</li>
-    <li>Original State: the original state listed in the almanac</li>
-  <li>Regularized State: the state the institution is in today, which is very rarely different (usually in Western territories-turned-states and West Virginia vs. Virginia)</li>
-</ul>
-
-<h4>Encoding Individuals</h4>
-
-<p>We attempt to give every individual named in the almanac a unique ID so that we can trace that individual's journey, perhaps through different churches and dioceses, over time.  However, our job is complicated by the fact that many individuals appear more than once in the almanac, such as when an urban priest also vists or attends a nearby rural church that does not have its own dedicated priest.  For now, if individuals have the exact same name and are in the same diocese, they are given the same ID.  Those individuals might be disambiguated (two John Smiths, for example) and given separe IDs with additional historical research.  Similarly, if two individuals have even slightly different names, they are given different IDs.  Some individuals might become associated (J. Smith in downtown Cincinnati and John Smith in the Cincinnati suburbs, for example) and assigned the same ID with additional historical research.</p>
-
-<h3>Project Next steps</h3>
-
-<p>After completing the 1870 almanac, we are moving back in time year by year to trace how the Catholic Church developed over time.  Students will compare the 1869 Almanac against our 1870 data, identifying places it has changed to create the 1869 dataset without having to encode from wholecloth.  The process will continue year by year until the 1830s.  Then the team will return to 1871 and move forward in the same fashion through 1895.</p>
-
-<h3>The Almanacs</h3>
-
-<p></p>
+<p>In the Spring and Summer of 2024, a team of outstanding BC humanities students under the direction of Ashlyn Stewart and funded by the Libraries Catholic Collections Initiative undertook the crucial and unglamorous transcribing and encoding work required to launch the project.  The students tagged (and, thus, structured) each institution’s name, place, and affiliates for the 1870 almanac in XML format.  We then transformed the XML data into a .csv format to power our visualizations more easily.  All of our data will soon be available in our GitHub repository as a series of spreadsheets.  Some of our most important data encoding and structuring decisions are described on our Data Details Page.</p>
