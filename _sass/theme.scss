@@ -28,6 +28,10 @@ p {
 h1, h2, h3, h4, h5, h6 {
     font-family: $title-font-family, $title-font-style !important;
 }
+
+h1 {
+    font-size: 2.5em !important;
+}
   
 .title-font {
     font-family: $title-font-family, $title-font-style !important;

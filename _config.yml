@@ -1,6 +1,6 @@
 # change the followings to match your Github username and repo name
-# baseurl: "/wip-almanacs" # the name of your github repo
-# url: "https://BCDigSchol.github.io" # the url of your github pages
+baseurl: "/catholic-almanacs" # the name of your github repo
+url: "https://BCDigSchol.github.io" # the url of your github pages
 
 # site information used in page title, meta data etc.
 title: "CATHOLIC ALMANACS"
@@ -17,8 +17,6 @@ nav-menu:
     link: about
   - title: Contributors
     link: contributors
-  - title: Contact
-    link: contact
 
 # sets whether a search bar appears on the site header
 # NOTE, you will have to increase the site of teh $site-header-height in _sass/theme-settings.scss to to see the search bar
