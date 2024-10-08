@@ -4,5 +4,8 @@
 @tailwind utilities;
 @tailwind components;
 
+$baseurl: "{{ site.baseurl }}";
+
 @import "theme";
 @import "custom-styles";
+

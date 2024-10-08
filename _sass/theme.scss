@@ -94,7 +94,7 @@ footer a:hover {
 .header-container {
     max-width: $site-max-width;
     color: $header-text-color !important;
-    background: linear-gradient($site-header-color, $site-header-color), url('/assets/img/header.png') no-repeat center center;
+    background: linear-gradient($site-header-color, $site-header-color), url($site-header-image-url) no-repeat center center;
     background-size: 100%;
 }
 

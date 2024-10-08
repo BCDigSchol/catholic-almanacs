@@ -2,7 +2,6 @@
 
 /* ===== COLORS ===== */
 // Change any of these to alter the look of the theme's colors
-
 $site-frame-color: #EEEEEE; // color that surrounds the website on the left & right (irrelevant if header/footer/content width is set to 100%
 $site-background-color: #FAFAFA; // base background color for the site's content
 $site-header-color: rgba(100, 20, 20, 0.6); // background color of the site header
@@ -10,7 +9,7 @@ $site-header-mobile-dropdown-menu-color: #676767; // background color of (mobile
 $site-title-color: #FAFAFA; // color of the site title / authors
 $site-footer-color: #40150e; // background color of the site header
 $site-accent-color: #8A100B; // accent color of site (used in the footer)
-$site-header-image-url : '/assets/img/header.png';  // LEAVE BLANK unless you want an image as a header background. If you do, point to assets directory like /assets/img/put-your-filename-here.jpeg
+$site-header-image-url: "#{$baseurl}/assets/img/header.png";;  // LEAVE BLANK unless you want an image as a header background. If you do, point to assets directory like /assets/img/put-your-filename-here.jpeg
 
 $link-base-color: #8A100B; // color of a regular link
 $link-visited-color: #8A100B; // color of a regular link when visited
