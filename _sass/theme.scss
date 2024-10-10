@@ -45,7 +45,7 @@ h1 {
 }
 
 .title-font a:hover {
-    color: $link-header-base-color !important;
+    color: $link-header-hover-color !important;
 }
 
 pre {
@@ -146,7 +146,7 @@ footer a:hover {
 
 /* Used to make various elements 'float' with a shadow */
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 4px 20px 0 rgba(0, 0, 0, 0.09);
 }
 
 .button {
@@ -155,7 +155,7 @@ footer a:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.button a, header a:visited {
+.button a, .button a:visited {
     color: $link-header-base-color !important;
     text-decoration: none;
 }
@@ -392,4 +392,13 @@ p.bibliography a {
     .mobile-header {
         display: flex;
     }
+}
+
+h3 {
+    font-size-adjust: 0.70;
+}
+
+.prose img {
+    padding: 0px !important;
+    margin: 5px 0px 5px 0px !important;
 }

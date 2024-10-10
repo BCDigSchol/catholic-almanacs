@@ -15,10 +15,10 @@ show-title: true
   {% endif %}
 
   {% if page.show-title %}
-    <h1 class="w-full text-center my-5 text-3xl page-title">{{ page.title }}</h1>
+    <h1 class="w-full md:mt-36 mt-4 text-center mb-5 text-3xl page-title">{{ page.title }}</h1>
   {% endif %}
 
-    <div class="mt-6 w-full flex flex-col justify-start items-center">
+    <div class="md:mb-36 mt-6 w-full flex flex-col justify-start items-center lg:px-40 md:px-20 px-5">
         <div class="w-full page-content prose-headings prose prose-{{site.theme-color}}">
           {{content}}
         </div>
