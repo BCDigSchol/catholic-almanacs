@@ -121,6 +121,9 @@ footer a:hover {
     // wrap text to avoid overflowing parent container
     word-wrap: break-word; /* For older browsers */
     overflow-wrap: break-word; /* For newer browsers */
+    border-width: 0px 1px 0px 1px;
+    border-style: solid;
+    border-color: #DEDEDE;
 }
 
 /* Settings for the search bar */
