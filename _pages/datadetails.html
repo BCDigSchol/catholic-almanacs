@@ -6,33 +6,43 @@ show-title: true
 ---
 <h3>Data Decisions</h3>
 <p>In an effort to be transparent about the places we had to simplify, collapse, and cull our data, we include here detailed descriptions of the choices we made to create our dataset based on the information printed in the highly inconsistent and often erroneous nineteenth-century almanacs.</p>
-<h4>Institutions We Encoded</h4>
 
+<h4>Institutions We Encoded</h4>
 <p>We encode nearly every US institution named in the Almanacs.  These included churches, chapels, missions, and stations; K-12 day and boarding schools, schools for boys and for girls, colleges, universities, and other more specialized educational institutions; convents, monestaries, and other religious assocations; hospitals, orphanages, and aslyums.  In our first iteration of the 1870 almanac, we opted not to encode the occasional religious or charitable society when it had no location information.  We might revisit theses societies in the future when our focus is less on the map and more on a searchable repository of information.</p>
+<p>The fields we have for basic institution information are as follows:</p>
+<ul>
+  <li>instID:</li>
+  <li>type:</li>
+  <li>instName:</li>
+  <li>language:</li>
+  <li>instNote:</li>
+</ul>
 
 <h4>Encoding Locations</h4>
-
-<p>We include the location of every institution in the almanacs in our dataset so that we could geospatially visualize the array of institutions across the United States.  We derive addresses from information given in the almanac; sometimes that included detailed information like cross-streets, and sometimes that was simply a town name.  We then use a <a href="https://workspace.google.com/marketplace/app/geocode_by_awesome_table/904124517349">Geocoder developed by AwesomeTable</a> to create coordinates based on those addresses.  When no coordinates could be generated&#8212;usually because the town is defunct&#8212;our team did additional research to find the coordinates of the institution.  To that end, the level of precision in locations identified varies by region.  Sometimes we can find a historical marker with exact coordinates of a location, and other times we have to create a somewhat arbitrary point nearby a named creek, for example, especially in rural areas.  When we do research, we also include links to the information sources we used to find the information.  In the future, we hope to create a process where those who are more knowledgeable about specific regions can send us updated location information to make our data as accurate as possible.</p>
+<p>We include the location of every institution in the almanacs in our dataset so that we could geospatially visualize the array of institutions across the United States.  The location information takes a variety of forms.  At their best, the almanacs provide a street address, city name, county name, and state name.  However, not all of those fields are always present.  Sometimes the location information is tied to a landmark instead of an address, and sometimes it is less specific, referencing a valley, body of water, or region.  We always record what the almanac provides, and we supplement additional or refined information as convenient.</p>
+  <p>When the town changed names or is defunct (which we identify as part of our coordinate process, explained below), our team does additional research to find its current name or location so that we can assign it a coordinate.  In the future, we hope to create a process where those who are more knowledgeable about specific regions can send us updated location information to make our data as accurate as possible.</p>
+<p>We record the information given in the almanac, the "original" information, in columns marked with "_orig."  We record information we research, the updated information, in columns marked with "_reg"</p>
 <p>The fields we have for locations are as follows:</p>
 <ul>
-  <li>Place Name: any address or place information provided by the almanac, ranging from "the corner of 4th and Front Streets" to "near the school house."</li>
-  <li>Region: any place information provided by the almanac that is not as specific as an address, county, or city, usually a valley or other topographical feature in the West.</li>
-  <li>Original County: the original county listed in the almanac, if given (usually in more rural areas)</li>
-  <li>Regularized County: the county the institution is in today, which is occasionally different, if identified (sometimes only marked if counties in the dioceses changed)</li>
-  <li>Original City: the original city name listed in the almanac, if given.</li>
-  <li>Regularized City: the city the institution is in today, which is sometimes different. If the original city is a misspelling, the correct spelling is shown here.  If the town is defunct and no replacement has sprung up, the current city is left blank.</li>
- <li>Original State: the original state listed in the almanac</li>
-  <li>Regularized State: the state that location is in today, which is very rarely different (usually in Western territories-turned-states and West Virginia vs. Virginia)</li>
+  <li>placeName: any address or place information provided by the almanac, ranging from "the corner of 4th and Front Streets" to "near the school house."</li>
+  <li>region: any place information provided by the almanac that is not as specific as an address, county, or city, usually a valley or other topographical feature in the West.</li>
+  <li>county_orig: the original county listed in the almanac, if given (usually in more rural areas)</li>
+  <li>county_reg: the county the institution is in today, which is occasionally different, if identified (sometimes only marked if counties in the dioceses changed)</li>
+  <li>city_orig: the original city name listed in the almanac, if given.</li>
+  <li>city_reg: the city the institution is in today, which is sometimes different. If the original city is a misspelling, the correct spelling is shown here.  If the town is defunct and no replacement has sprung up, the current city is left blank.</li>
+ <li>state_orig: the original state listed in the almanac</li>
+  <li>state_reg: the state that location is in today, which is very rarely different (usually in Western territories-turned-states and West Virginia vs. Virginia)</li>
 </ul>
+
+<h4>Adding Coordinates</h4>
+We derive addresses from information given in the almanac; sometimes that includes detailed information like cross-streets, and sometimes that is simply a town name.  We then use a <a href="https://workspace.google.com/marketplace/app/geocode_by_awesome_table/904124517349">Geocoder developed by AwesomeTable</a> to create coordinates based on those addresses.  When no coordinates can be generated&#8212;usually because the town is defunct&#8212;our team does additional research to find the coordinates of the historical institution.  To that end, the level of precision in locations identified varies by region.  Sometimes we can find a historical marker with exact coordinates of a location, and other times we have to create a somewhat arbitrary point nearby a named creek, for example, especially in rural areas.  When we do research, we also include links to the information sources we used to find the information.  In the future, we hope to create a process where those who are more knowledgeable about specific regions can send us updated location information to make our data as accurate as possible.</p>
 
 <h4>Encoding Individuals</h4>
 
-<p>We attempt to give every individual named in the almanac a unique ID so that we can trace that individual's journey, perhaps through different churches and dioceses, over time.  However, our job is complicated by the fact that many individuals appear more than once in the almanac, such as when an urban priest also vists or attends a nearby rural church that does not have its own dedicated priest.  For now, if individuals have the exact same name and are in the same diocese, they are given the same ID.  Those individuals might be disambiguated (two John Smiths, for example) and given separe IDs with additional historical research.  Similarly, if two individuals have even slightly different names, they are given different IDs.  Some individuals might become associated (J. Smith in downtown Cincinnati and John Smith in the Cincinnati suburbs, for example) and assigned the same ID with additional historical research.</p>
-
-<h3>Project Next steps</h3>
-
-<p>After completing the 1870 almanac, we are moving back in time year by year to trace how the Catholic Church developed over time.  Students will compare the 1869 Almanac against our 1870 data, identifying places it has changed to create the 1869 dataset without having to encode from wholecloth.  The process will continue year by year until the 1830s.  Then the team will return to 1871 and move forward in the same fashion through 1895.</p>
-
-<h3>The Almanacs</h3>
-
-<p></p>
+<p>We attempt to give every individual named in the almanac a unique ID so that we can trace that individual's journey, perhaps through different churches and dioceses, over time.  However, our job is complicated by the fact that names are slippery!  Consider the following complications:</p>
+  <ul>
+    <li>many individuals appear more than once in the almanac, such as when an urban priest also vists or attends a nearby rural church that does not have its own dedicated priest.</li>
+  <li>some different individuals share the same name, such as two James Smiths in different dioceses.</li>
+  <li>some individuals have their name recorded differently in different years, usually with abbreviations or typos.  For example, "James Smith" might be "J. Smith" another year because of an abbreviation and "Jams Smith" another year because of a typo.</li>
+  </ul>  
+<p>It is possible that we have associated (given the same ID to) two individuals who are actually distinct persons.  It is also possible that we have falsely disambiguated two people, meaning that one individual is listed with two different IDs.  In the future, we hope to create a process where those who are more knowledgeable about specific individuals or diocese can send us additional biographical information to make our data as accurate as possible.</p>
