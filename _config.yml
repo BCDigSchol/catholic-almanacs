@@ -22,7 +22,7 @@ nav-menu:
   - title: Contact
     link: contributors
   - title: BC Libraries
-    link: lib #pg doesn't yet exist
+    link: #plz link to https://library.bc.edu/
 
 # sets whether a search bar appears on the site header
 # NOTE, you will have to increase the site of teh $site-header-height in _sass/theme-settings.scss to to see the search bar
