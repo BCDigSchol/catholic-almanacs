@@ -13,12 +13,16 @@ theme-color: indigo # indigo|yellow|pink|green|stone|
 nav-menu:
   - title: Home
     link: index
+    - title: About
+    link: about
   - title: Map
     link: map
-  - title: About
-    link: about
-  - title: Contributors
+  - title: Data
+    link: data #pg doesn't yet exist
+  - title: Contact
     link: contributors
+  - title: BC Libraries
+    link: lib #pg doesn't yet exist
 
 # sets whether a search bar appears on the site header
 # NOTE, you will have to increase the site of teh $site-header-height in _sass/theme-settings.scss to to see the search bar
