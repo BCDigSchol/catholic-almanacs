@@ -18,7 +18,7 @@ nav-menu:
   - title: Map
     link: map
   - title: Data
-    link: data #pg doesn't yet exist
+    link: data
   - title: Contact
     link: contributors
   - title: BC Libraries
