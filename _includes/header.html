@@ -17,6 +17,10 @@
                         <a href="{{ menu_item.link }}">
                             {{ menu_item.title }}
                         </a>
+                    {% elsif menu_item.external-link %}
+                        <a href="{{ menu_item.external-link }}">
+                            {{ menu_item.title }}
+                        </a>
                     {% else %}
                         {{ menu_item.title }}
                     {% endif %}
@@ -24,9 +28,17 @@
                 {% if menu_item.submenu %}
                     <div class="dropdown-content">
                         {% for submenu_item in menu_item.submenu %}
+                            {% if submenu_item.link %}
                             <a href="{{ site.baseurl }}/{{ submenu_item.link }}">
                                 {{ submenu_item.title }}
                             </a>
+                            {% elsif submenu_item.external-link %}
+                            <a href="{{ submenu_item.external-link }}">
+                                {{ submenu_item.title }}
+                            </a>
+                            {% else %}
+                                {{ submenu_item.title }}
+                            {% endif %}
                             {% if forloop.last == false %}
                                 <hr />
                             {% endif %}
@@ -79,6 +91,10 @@
                             <a href="{{ menu_item.link }}">
                                 {{ menu_item.title }}
                             </a>
+                        {% elsif menu_item.external-link %}
+                            <a href="{{ menu_item.external-link }}">
+                                {{ menu_item.title }}
+                            </a>
                         {% else %}
                             {{ menu_item.title }}
                         {% endif %}
@@ -86,9 +102,17 @@
                     {% if menu_item.submenu %}
                         <div class="dropdown-content">
                             {% for submenu_item in menu_item.submenu %}
+                                {% if submenu_item.link %}
                                 <a href="{{ site.baseurl }}/{{ submenu_item.link }}">
                                     {{ submenu_item.title }}
                                 </a>
+                                {% elsif submenu_item.external-link %}
+                                <a href="{{ submenu_item.external-link }}">
+                                    {{ submenu_item.title }}
+                                </a>
+                                {% else %}
+                                    {{ submenu_item.title }}
+                                {% endif %}
                                 {% if forloop.last == false %}
                                     <hr />
                                 {% endif %}

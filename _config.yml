@@ -22,16 +22,16 @@ nav-menu:
   - title: Contact
     link: contributors
   - title: BC Libraries
-    link: #plz link to https://library.bc.edu/
+    external-link: https://library.bc.edu/
 
 # sets whether a search bar appears on the site header
 # NOTE, you will have to increase the site of teh $site-header-height in _sass/theme-settings.scss to to see the search bar
 search-bar: false
 
 hide-footer: false # set to true to hide the footer
-footer-message: Digital Scholarship Group | Boston College Libraries
-# footer-submessage:  By Chase Hockema, with the Digital Scholarship Group, Boston College
-footer-submessage-link: https://ds.bc.edu
+footer-message: BOSTON COLLEGE LIBRARIES
+footer-submessage:  Digital Scholarship Group | Contact Us
+footer-submessage-link: mailto:digitalscholarship@bc.edu
 
 # google-analytics: // if you want to use Google analytics, include your ID here
 

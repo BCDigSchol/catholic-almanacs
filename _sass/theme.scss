@@ -108,6 +108,10 @@ footer a:hover {
     background-color: $site-accent-color;
 }
 
+.nav-bar {
+    font-family: $nav-font-family, $nav-font-style !important;
+}
+
 /* position and width  of the page body content */
 .content-wrapper {
     position: absolute;

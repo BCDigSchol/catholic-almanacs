@@ -1,10 +1,15 @@
 <footer class="w-full flex flex-col justify-start items-center">
-    <div class="w-full footer-container flex flex-col justify-center items-center card">
-        <div class="w-full text-center p-4">
-            {{ site.footer-message }}
-        </div>
+    <div class="w-full footer-container flex flex-col justify-center items-start p-10">
+        {% if site.footer-message %}
+            <!--
+            <div class="footer-message-font w-full text-left px-2">
+                {{ site.footer-message }}
+            </div>
+            -->
+            <img class="ml-2" src="assets/img/bcl_logo-white.png" width="275px" alt="BCL Logo">
+        {% endif %}
         {% if site.footer-submessage %}
-            <div class="w-full text-center subfooter-container p-2 flex flex-col justify-start items-center">
+            <div class="w-full text-left subfooter-container px-2 flex flex-col justify-start items-start">
                 {% if site.footer-submessage-link %}
                     <a href="{{ site.footer-submessage-link }}" target="_blank">
                 {% endif %}
