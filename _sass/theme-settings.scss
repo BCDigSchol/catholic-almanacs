@@ -52,9 +52,4 @@ $body-font-style: sans-serif; // either serif or sans serif
 
 /* ===== LAYOUT ===== */
 // ONLY change these if you want to change the dimensions of the site's header/content
-
-$site-header-height: 220px; // the size of the site header, used to place the top of the site's content
-$site-header-height-mobile: 40px; // header size, but for mobile
-$site-footer-height: 100px; // the size of the site footer
-$site-footer-height-mobile: 30px; // footer size, but for mobile
 $site-max-width: 1232px; // maximum width of the site, keep 100% for full width, or 1000px for 1000 pixels wide

@@ -53,12 +53,6 @@ pre {
 }
   
 /* Settings for header and body to make fixed site header */
-header {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: 999;
-}
 
 /* a element settings for the header */
 header a, header a:visited {
@@ -67,13 +61,6 @@ header a, header a:visited {
   
 header a:hover {
     color: $link-header-hover-color !important;
-}
-
-footer {
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    z-index: 999;
 }
 
 /* a element settings for the header */
@@ -114,13 +101,10 @@ footer a:hover {
 
 /* position and width  of the page body content */
 .content-wrapper {
-    position: absolute;
-    left: 0px;
 }
 
 .content-container {
     max-width: $site-max-width;
-    padding-bottom: calc(10px + #{$site-footer-height});
     background-color: $site-background-color;
     // wrap text to avoid overflowing parent container
     word-wrap: break-word; /* For older browsers */
@@ -297,21 +281,9 @@ p.bibliography a {
 // alternatives for mobile settings
 @media screen and (min-width: 769px) {
 
-    .content-wrapper {
-        top: $site-header-height;
-    }
-
     .title-font {
         font-size: 80px;
         text-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 4px 20px 0 rgba(0, 0, 0, 0.09);
-    }
-
-    .header-container {
-        height: $site-header-height;
-    }
-    
-    .footer-container {
-        height: $site-footer-height;
     }
 
     .nav-bar {
@@ -333,17 +305,12 @@ p.bibliography a {
 
 @media screen and (max-width: 768px) and (min-width: 401px) {
 
-    .content-wrapper {
-        top: $site-header-height-mobile;
-    }
-
     .title-font {
         font-size: 20px;
         width: 100%;
     }
 
     .footer-container {
-        height: $site-footer-height-mobile;
         font-size: 75%;
     }
 
@@ -366,21 +333,12 @@ p.bibliography a {
 
 @media screen and (max-width: 400px) {
 
-    .content-wrapper {
-        top: $site-header-height-mobile;
-    }
-
     .title-font {
         font-size: 14px;
         width: 100%;
     }
-
-    .header-container {
-        height: $site-header-height-mobile;
-    }
     
     .footer-container {
-        height: $site-footer-height-mobile;
         font-size: 50%;
     }
 
