@@ -7,8 +7,15 @@ show-title: true
 <h3>Data Decisions</h3>
 <p>In an effort to be transparent about the places we had to simplify, collapse, and cull our data, we include here detailed descriptions of the choices we made to create our dataset based on the information printed in the highly inconsistent and often erroneous nineteenth-century almanacs.</p>
 
-<h4>Institutions We Encoded</h4>
-<p>We encode nearly every US institution named in the Almanacs.  These included churches, chapels, missions, and stations; K-12 day and boarding schools, schools for boys and for girls, colleges, universities, and other more specialized educational institutions; convents, monestaries, and other religious assocations; hospitals, orphanages, and aslyums.  In our first iteration of the 1870 almanac, we opted not to encode the occasional religious or charitable society when it had no location information.  We might revisit theses societies in the future when our focus is less on the map and more on a searchable repository of information.</p>
+<h4>Institutions We Encode</h4>
+<p>We encode nearly every US institution named in the Almanacs.  These include:
+  <ul>
+    <li><strong>religious institutions</strong> like churches, chapels, missions, and stations; </li>
+    <li><strong>educational institutions</strong> like K-12 day and boarding schools, parochial schools, schools for boys and for girls, colleges, universities, and other more specialized educational institutions;</li>
+    <li><strong>healthcare institutions</strong> like hospitals and infirmaries</li> 
+    <li><strong>charitable institutions</strong> like orphanages, and aslyums.</li></ul>
+<li><strong>consecrated life institutions</strong> like convents, monestaries, and other religious communities;</li>
+      In our first iteration of the 1870 almanac, we opted not to encode the occasional layman's religious or charitable society when it had no location information.  We might revisit theses societies in the future.</p>
 <p>The fields we have for basic institution information are as follows:</p>
 <ul>
   <li>instID:</li>
@@ -38,11 +45,20 @@ show-title: true
 We derive addresses from information given in the almanac; sometimes that includes detailed information like cross-streets, and sometimes that is simply a town name.  We then use a <a href="https://workspace.google.com/marketplace/app/geocode_by_awesome_table/904124517349">Geocoder developed by AwesomeTable</a> to create coordinates based on those addresses.  When no coordinates can be generated&#8212;usually because the town is defunct&#8212;our team does additional research to find the coordinates of the historical institution.  To that end, the level of precision in locations identified varies by region.  Sometimes we can find a historical marker with exact coordinates of a location, and other times we have to create a somewhat arbitrary point nearby a named creek, for example, especially in rural areas.  When we do research, we also include links to the information sources we used to find the information.  In the future, we hope to create a process where those who are more knowledgeable about specific regions can send us updated location information to make our data as accurate as possible.</p>
 
 <h4>Encoding Individuals</h4>
-
 <p>We attempt to give every individual named in the almanac a unique ID so that we can trace that individual's journey, perhaps through different churches and dioceses, over time.  However, our job is complicated by the fact that names are slippery!  Consider the following complications:</p>
   <ul>
     <li>many individuals appear more than once in the almanac, such as when an urban priest also vists or attends a nearby rural church that does not have its own dedicated priest.</li>
   <li>some different individuals share the same name, such as two James Smiths in different dioceses.</li>
   <li>some individuals have their name recorded differently in different years, usually with abbreviations or typos.  For example, "James Smith" might be "J. Smith" another year because of an abbreviation and "Jams Smith" another year because of a typo.</li>
   </ul>  
-<p>It is possible that we have associated (given the same ID to) two individuals who are actually distinct persons.  It is also possible that we have falsely disambiguated two people, meaning that one individual is listed with two different IDs.  In the future, we hope to create a process where those who are more knowledgeable about specific individuals or diocese can send us additional biographical information to make our data as accurate as possible.</p>
+<p>Deducing which names represent distinct individuals and which names are variants of the same individual is challenging, and something we work on daily in our dataset.</p><p>Despite our best efforts, it is possible that we have associated (given the same ID to) two individuals who are actually distinct persons.  It is also possible, and more likely, that we have falsely disambiguated two people, meaning that one individual is listed with two different IDs.  In the future, we hope to create a process where those who are more knowledgeable about specific individuals or diocese can send us additional biographical information to make our data as accurate as possible.</p>
+
+
+<h3>Data Creation History</h3>
+<h4>The Original Data Creation Process</h4>
+<p>In the Spring and Summer of 2024, a team of outstanding BC humanities students under the direction of Ashlyn Stewart and funded by the Libraries Catholic Collections Initiative undertook the crucial and unglamorous transcribing and encoding work required to launch the project.  The students tagged (and, thus, structured) each institution’s name, place, and affiliates for the 1870 almanac in XML format.  We then transformed the XML data into a .csv format to power our visualizations more easily.  Some of our most important data encoding and structuring decisions are described on our <a href="datadetails.html">Data Details Page</a>.</p>
+
+<h4>Continuing Data Creation</h4>
+<p>Students are now working from both ends of the almanac run, extracting each institution’s name, place, and affiliates for almanacs in two periods: 1834-43 and 1864-69.  Students compare the 1869 Almanac against our 1870 data, identifying places that have changed to create the 1869 dataset without having to encode from wholecloth.  If there is no change year over year, the students are able to pretty quickly fill in a diocese's information based on the following year.  However, if there are changes (which often happens with an individual's name or place name), encoding the data takes a bit longer.  The process will continue year by year until the two teams meet in the 1850s.  Then, the team will return to 1871 and move forward in the same fashion through 1895.</p>
+<p>Our team adds new data about different dioceses in different years every day and publishes updated data quarterly.  If you don't see a diocese in a particular year that you're curious about, drop us a line [ADD LINK HERE]; we can give you an estimate of when it will be ready.</p>
+  
