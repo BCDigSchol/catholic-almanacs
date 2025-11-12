@@ -47,16 +47,25 @@ show-title: true
 <p>In the future, we hope to create a process where those who are more knowledgeable about specific regions can send us updated location information to make our data as accurate as possible.</p>
 
 <h4>Encoding Individuals</h4>
-<p>We attempt to give every individual named in the almanac a unique ID so that we can trace that individual's journey, perhaps through different churches and dioceses, over time.  However, our job is complicated by the fact that names are slippery!  Consider the following complications:</p>
+<p>We record the information given in the almanac, the "original" information, in columns marked with "_orig."  We record information we research, the updated information, in columns marked with "_reg"</p>
+<p>The fields we have for locations are as follows:</p>
+<ul>
+  <li>persTitle: the title given to the individual in the almanac, most often "Rev."</li>
+  <li>persName: the exact spelling of the individual's full name, as written in the almanac, including abbreviations, punctuation, etc.</li>
+  <li>persSuffix: any suffix assigned to an individual, usually a religious order, such as S.J.</li>
+  <li>persRole: the job title given to an individual, such as "superior" or "professor"</li>
+  <li>persNote: any additional information given about an individual, usually that he is "absent" or "of" a certain town.</li>
+</ul>
+<p>We then attempt to give every individual named in the almanac a unique ID so that we can trace that individual's journey, perhaps through different churches and dioceses, over time.  However, our job is complicated by the fact that names are slippery!  Consider the following complications:</p>
   <ul>
     <li>many individuals appear more than once in the almanac, such as when an urban priest also vists or attends a nearby rural church that does not have its own dedicated priest.</li>
   <li>some different individuals share the same name, such as two James Smiths in different dioceses.</li>
   <li>some individuals have their name recorded differently in different years, usually with abbreviations or typos.  For example, "James Smith" might be "J. Smith" another year because of an abbreviation and "Jams Smith" another year because of a typo.</li>
   </ul>  
-<p>Deducing which names represent distinct individuals and which names are variants of the same individual is challenging, and something we work on daily in our dataset.</p><p>Despite our best efforts, it is possible that we have associated (given the same ID to) two individuals who are actually distinct persons.  It is also possible, and more likely, that we have falsely disambiguated two people, meaning that one individual is listed with two different IDs.  In the future, we hope to create a process where those who are more knowledgeable about specific individuals or diocese can send us additional biographical information to make our data as accurate as possible.</p>
+<p>Deducing which names represent distinct individuals and which names are variants of the same individual is challenging, and something we work on daily in our dataset.  We created a script to automatically assign IDs based on the individual's name and diocese, and our students spend a lot of time correcting and reconciling those computer-generated IDs to make sure that individuals receive the correct ID. Despite our best efforts, it is possible that we have associated (given the same ID to) two individuals who are actually distinct persons.  It is also possible, and more likely, that we have falsely disambiguated two people, meaning that one individual is listed with two different IDs.  In the future, we hope to create a process where those who are more knowledgeable about specific individuals or diocese can send us additional biographical information to make our data as accurate as possible.</p>
 
-<h4>Data Format</h4>
-<p>Each diocese in each year is one one spreadsheet, e. g. Alton1870 and Cincinnati1837.  All spreadsheets have the same columns on the same four tabs.  Only the first tab (the master) is ingested into the database.  (The following three tabs hold slices of data that are generated for the master, the second tab for locations and the third and fourth for people IDs).</p>
+<h4>Data Model</h4>
+<p>Each diocese in each year is one one spreadsheet, e. g. Alton1870 and Cincinnati1837.  So far, to cover 1834-38 and '64-70, that leaves us with about 400 separate spreadsheets.  All spreadsheets have the same columns on the same four tabs.  Only the first tab (the master) is ingested into the database.  (The following three tabs hold slices of data that are generated for the master, the second tab for locations and the third and fourth for people IDs).</p>
 
 <h3>Data Creation History</h3>
 <h4>The Original Data Creation Process</h4>
