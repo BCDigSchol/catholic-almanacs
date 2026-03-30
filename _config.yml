@@ -19,8 +19,8 @@ nav-menu:
     link: map
   - title: Data
     link: data
-  - title: Contributors
-    link: contributors
+  - title: Contact
+    link: contact
   - title: BC Libraries
     external-link: https://library.bc.edu/
 
