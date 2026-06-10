@@ -21,10 +21,12 @@ body {
     color: $body-text-color !important;
 }
 
+
 p {
     color: $body-text-color !important;
     font-size: 1.25em;
     line-height: 1.42;
+    margin-top: 0.25rem;
 }
 
 ul {
