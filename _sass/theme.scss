@@ -29,7 +29,8 @@ body {
 
 .prose ul {
   list-style: disc outside !important;
-  line-height: 1.4;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
   font-size: 1.25em;
   color:#000000;
 }
@@ -39,13 +40,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2.45em !important;
+    font-size: 2.57em !important;
 }
 
 .prose h2 {
     font-size: 2.4em !important;
-    margin-top: 0.7rem;
-    margin-bottom: 0.4rem;
+    margin-top: 0.9rem;
+    margin-bottom: 0.5rem;
 }
 
 h3 {
