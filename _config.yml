@@ -23,9 +23,9 @@ nav-menu:
       - title: Data Documentation
         link: datadetails
       - title: How to Search
-        link: xxxxxx
+        link: howtosearch
       - title: Search Database
-        link: xxxxxx
+        link: databaseembed
    - title: About
      link: about
      submenu:
