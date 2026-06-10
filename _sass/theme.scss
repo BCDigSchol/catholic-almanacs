@@ -21,7 +21,6 @@ body {
     color: $body-text-color !important;
 }
 
-
 .prose p {
     color: $body-text-color !important;
     font-size: 1.25em;
@@ -30,6 +29,7 @@ body {
 
 .prose ul {
   list-style: disc outside !important;
+  line-height: 1;
   font-size: 1.25em;
   color:#000000;
 }
@@ -44,7 +44,6 @@ h1 {
 
 .prose h2 {
     font-size: 2.4em !important;
-    line-height: 1;
     margin-bottom: 0.4rem;
 }
 
