@@ -22,14 +22,14 @@ body {
 }
 
 
-p {
+.prose p {
     color: $body-text-color !important;
     font-size: 1.25em;
     line-height: 1.42;
     margin-top: 0.25rem;
 }
 
-ul {
+.prose ul {
   list-style: disc outside;
   font-size: 16px;
 }
@@ -38,21 +38,21 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $title-font-family, $title-font-style !important;
 }
 
-h1 {
+.prose h1 {
     font-size: 2.45em !important;
 }
 
-h2 {
+.prose h2 {
     font-size: 2.1em !important;
     line-height: 1;
     margin-bottom: 0.25rem;
 }
 
-h3 {
+.prose h3 {
     font-size: 2em !important;
 }
 
-h4 {
+.prose h4 {
     font-size: 1.8em !important;
 }
   
