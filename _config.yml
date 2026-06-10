@@ -13,15 +13,27 @@ theme-color: indigo # indigo|yellow|pink|green|stone|
 nav-menu:
   - title: Home
     link: index
-  - title: About
-    link: about
-  - title: Map
+  - title: Visualizations
     link: map
   - title: Data
     link: data
-  - title: Contact
-    link: contact
-  - title: BC Libraries
+      - title: Overview
+        link: xxxxxx
+      - title: Data Documentation
+        link: xxxxx
+      - title: How to Search
+        link: xxxxxx
+      - title: Search Database
+        link: xxxxxx
+   - title: About
+    link: about
+      - title: Project Summary
+        link: xxxxxx
+      - title: Project Staff
+        link: xxxxx
+      - title: Contact
+        link: contact
+    - title: BC Libraries
     external-link: https://library.bc.edu/
 
 # sets whether a search bar appears on the site header
