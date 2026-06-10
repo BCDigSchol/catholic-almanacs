@@ -24,8 +24,8 @@ body {
 .prose p {
     color: $body-text-color !important;
     font-size: 1.25em;
-    line-height: 1.8em;
-    margin-bottom: 0.5rem;
+    line-height: 1.7em;
+    margin-bottom: 0.38rem;
 }
 
 .prose ul {
@@ -37,7 +37,7 @@ body {
 }
 
 .prose ul li::marker {
-    color: #000000;
+    color: #09152B;
     font-size: 1.2em;
 }
 
@@ -46,13 +46,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prose h1 {
-    font-size: 2.45em !important;
+    font-size: 2em !important;
+    margin-top: 0.9rem;
 }
 
 .prose h2 {
     font-size: 2.4em !important;
-    margin-top: 0.9rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.1rem;
+    margin-bottom: 0.6rem;
 }
 
 .prose h3 {
