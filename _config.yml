@@ -26,9 +26,9 @@ nav-menu:
         link: howtosearch
       - title: Search Database
         link: databaseembed
-   - title: About
-     link: about
-     submenu:
+  - title: About
+    link: about
+    submenu:
       - title: About the Almanacs
         link: almanacdetails
       - title: Project Summary
@@ -37,8 +37,8 @@ nav-menu:
         link: projectstaff
       - title: Contact
         link: contact
-    - title: BC Libraries
-      external-link: https://library.bc.edu/
+  - title: BC Libraries
+    external-link: https://library.bc.edu/
 
 # sets whether a search bar appears on the site header
 # NOTE, you will have to increase the site of teh $site-header-height in _sass/theme-settings.scss to to see the search bar
