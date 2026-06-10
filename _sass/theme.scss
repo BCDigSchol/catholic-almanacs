@@ -23,7 +23,8 @@ body {
 
 p {
     color: $body-text-color !important;
-    font-size: 1.2081em;
+    font-size: 1.25em;
+    line-height: 1.75;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -36,7 +37,7 @@ h1 {
 
 h2 {
     font-size: 2.1em !important;
-    margin-bottom: 0.19rem;
+    margin-bottom: 0.6em;
 }
 
 h3 {
