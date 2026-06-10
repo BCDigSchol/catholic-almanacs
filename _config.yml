@@ -18,19 +18,21 @@ nav-menu:
   - title: Data
     link: data
       - title: Overview
-        link: xxxxxx
+        link: dataoverview
       - title: Data Documentation
-        link: xxxxx
+        link: datadetails
       - title: How to Search
         link: xxxxxx
       - title: Search Database
         link: xxxxxx
    - title: About
     link: about
+      - title: About the Almanacs
+        link: almanacdetails
       - title: Project Summary
-        link: xxxxxx
+        link: projectsummary
       - title: Project Staff
-        link: xxxxx
+        link: projectstaff
       - title: Contact
         link: contact
     - title: BC Libraries
