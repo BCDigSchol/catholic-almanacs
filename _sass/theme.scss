@@ -25,12 +25,10 @@ body {
 .prose p {
     color: $body-text-color !important;
     font-size: 1.25em;
-    line-height: 1.42;
-    margin-top: 0.25rem;
 }
 
 .prose ul {
-  list-style: disc outside;
+  list-style: disc outside !important;
   font-size: 16px;
 }
 
