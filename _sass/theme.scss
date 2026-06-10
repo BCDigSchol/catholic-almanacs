@@ -45,8 +45,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $title-font-family, $title-font-style !important;
 }
 
-.prose h1 {
-    font-size: 2em;
+h1.title-font {
+    font-size: 2em !important;
     margin-top: 1.5rem;
 }
 
