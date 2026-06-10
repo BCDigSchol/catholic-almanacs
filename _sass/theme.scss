@@ -24,7 +24,12 @@ body {
 p {
     color: $body-text-color !important;
     font-size: 1.25em;
-    line-height: 1.37;
+    line-height: 1.42;
+}
+
+ul {
+  list-style: disc outside;
+  font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
