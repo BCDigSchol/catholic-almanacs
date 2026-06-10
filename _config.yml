@@ -31,8 +31,6 @@ nav-menu:
   - title: Project Details
     link: about
     submenu:
-      - title: Project Summary
-        link: projectsummary
       - title: Project Staff
         link: projectstaff
       - title: Contact
