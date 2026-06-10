@@ -26,11 +26,11 @@ nav-menu:
         link: howtosearch
       - title: Search Database
         link: databaseembed
-  - title: About
+  - title: About the Almanacs
+    link: almanacdetails
+  - title: Project Details
     link: about
     submenu:
-      - title: About the Almanacs
-        link: almanacdetails
       - title: Project Summary
         link: projectsummary
       - title: Project Staff
