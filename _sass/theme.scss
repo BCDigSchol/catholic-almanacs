@@ -42,7 +42,8 @@ body {
   color:#000000;
   list-style: disc outside;
   line-height: 1.6;
-  max-width: 780px;  
+  max-width: 780px; 
+  margin-bottom: 3rem !important; 
 }
 
 .prose ul li::marker {
