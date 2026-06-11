@@ -28,6 +28,11 @@ body {
     margin-bottom: 0.25rem;
 }
 
+.prose.intro p{
+    margin-top: 1rem;
+    margin-bottom: 1.7rem; 
+}
+
 .prose ul {
   font-size: 1.25em;
   color:#000000;
@@ -89,10 +94,6 @@ h1.title-font {
     color: $link-header-hover-color !important;
 }
 
-p.intro{
-    margin-top: 1rem;
-    margin-bottom: 1.7rem; 
-}
 pre {
     background-color: $code-block-color !important;
 }
