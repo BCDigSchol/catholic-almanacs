@@ -45,16 +45,6 @@ body {
   max-width: 780px; 
 }
 
-.prose ul + p {
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.prose ul + h2 {
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
-}
-
 .prose ul li::marker {
     color: #09152B;
     font-size: 1.2em;
