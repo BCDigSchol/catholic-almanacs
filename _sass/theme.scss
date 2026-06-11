@@ -43,7 +43,14 @@ body {
   list-style: disc outside;
   line-height: 1.6;
   max-width: 780px; 
-  margin-bottom: 3rem !important; 
+}
+
+.prose ul + p {
+    margin-top: 4rem;
+}
+
+.prose ul + h2 {
+    margin-top: 4rem;
 }
 
 .prose ul li::marker {
