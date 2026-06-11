@@ -29,11 +29,12 @@ body {
 }
 
 .prose ul {
-  list-style: disc outside;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
   font-size: 1.25em;
   color:#000000;
+  list-style: disc outside;
+  line-height: 1.6;
+  max-width: 800px;  
+  margin-bottom: 0.5rem;
 }
 
 .prose ul li::marker {
@@ -49,6 +50,7 @@ h1.title-font {
     font-size: 2.7em !important;
     margin-top: 4.5rem;
     margin-bottom: .09rem;
+    font-weight: 300;
 }
 
 .prose h2 {
@@ -59,13 +61,17 @@ h1.title-font {
 }
 
 .prose h3 {
-    font-size: 2em;
+    font-size: 1.7em;
     font-weight: 300;
+    margin-top: 1.3rem;
+    margin-bottom: 0.6rem;
 }
 
 .prose h4 {
-    font-size: 1.8em;
+    font-size: 1.3em;
     font-weight: 300;
+    margin-top: 1.3rem;
+    margin-bottom: 0.6rem;
 }
   
 .title-font {
