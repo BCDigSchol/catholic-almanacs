@@ -22,14 +22,14 @@ body {
 }
 
 .prose p {
-    color: $body-text-color !important;
+    color: $body-text-color;
     font-size: 1.25em;
     line-height: 1.7em;
     margin-bottom: 0.25rem;
 }
 
 .prose ul {
-  list-style: disc outside !important;
+  list-style: disc outside;
   line-height: 1.6;
   margin-bottom: 0.5rem;
   font-size: 1.25em;
@@ -52,17 +52,17 @@ h1.title-font {
 }
 
 .prose h2 {
-    font-size: 2.4em !important;
+    font-size: 2.4em;
     margin-top: 1.3rem;
     margin-bottom: 0.6rem;
 }
 
 .prose h3 {
-    font-size: 2em !important;
+    font-size: 2em;
 }
 
 .prose h4 {
-    font-size: 1.8em !important;
+    font-size: 1.8em;
 }
   
 .title-font {
