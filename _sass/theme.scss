@@ -21,9 +21,9 @@ body {
     color: $body-text-color !important;
 }
 
-.prose p {
+.prose.prose-indigo p {
     color: $body-text-color;
-    font-size: 1.25em;
+    font-size: 1.2em;
     line-height: 1.7em;
     margin-bottom: 0.25rem;
 }
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1.title-font {
-    font-size: 2.7em !important;
+    font-size: 2.9em !important;
     margin-top: 4.5rem;
     margin-bottom: .09rem;
     font-weight: 300;
@@ -56,8 +56,8 @@ h1.title-font {
 .prose h2 {
     font-size: 2.4em;
     font-weight: 300;
-    margin-top: 1.3rem;
-    margin-bottom: 0.6rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0.7rem;
 }
 
 .prose h3 {
