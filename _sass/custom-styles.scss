@@ -30,8 +30,10 @@ prop{display:none;}
     margin-top: 1rem;
     margin-bottom: 0.7rem;
     width: 100%;
-    max-width: 100ch; /* matches .prose max-width */
-    text-align: left;
+    max-width: 100ch;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
 }
 
     
