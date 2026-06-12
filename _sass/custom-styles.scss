@@ -27,9 +27,10 @@ prop{display:none;}
 .home-page-header{
     font-size: 2.4em;
     font-weight: 300;
-    align-self: flex-start;
     margin-top: 1rem;
     margin-bottom: 0.7rem;
+    width: fit-content;
+    margin-left: auto;  /* pushes it right; use margin-right: auto for left */
 }
 
     
