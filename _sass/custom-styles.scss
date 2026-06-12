@@ -29,8 +29,9 @@ prop{display:none;}
     font-weight: 300;
     margin-top: 1rem;
     margin-bottom: 0.7rem;
-    width: fit-content;
-    margin-right: auto;  /* pushes it right; use margin-right: auto for left */
+    width: 100%;
+    max-width: 100ch; /* matches .prose max-width */
+    text-align: left;
 }
 
     
