@@ -226,6 +226,12 @@ footer a:hover {
     padding: 12px 16px;
     z-index: 1;
 }
+
+.dropdown-content a, .dropdown-content a:visited {
+    color: $link-dropdown-base-color !important;
+    display: block;
+    padding: 6px 0;
+}
   
 .dropdown:hover .dropdown-content {
     display: block;
