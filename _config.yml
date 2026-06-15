@@ -13,10 +13,10 @@ theme-color: indigo # indigo|yellow|pink|green|stone|
 nav-menu:
   - title: Home
     link: index
-  - title: Visualizations
-    link: map
   - title: Data
     link: data
+  - title: Visualizations
+    link: map
     submenu:
       - title: Overview
         link: dataoverview
