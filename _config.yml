@@ -15,8 +15,6 @@ nav-menu:
     link: index
   - title: Data
     link: data
-  - title: Visualizations
-    link: map
     submenu:
       - title: Overview
         link: dataoverview
@@ -26,6 +24,8 @@ nav-menu:
         link: howtosearch
       - title: Search Database
         link: databaseembed
+  - title: Visualizations
+    link: map
   - title: About the Almanacs
     link: almanacdetails
   - title: Project Details
