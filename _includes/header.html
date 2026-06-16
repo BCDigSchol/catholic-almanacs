@@ -18,7 +18,7 @@
                             {{ menu_item.title }}
                         </a>
                     {% elsif menu_item.external-link %}
-                        <a href="{{ menu_item.external-link }}">
+                        <a href="{{ menu_item.external-link }}" target="_blank" rel="noopener noreferrer">
                             {{ menu_item.title }}
                         </a>
                     {% else %}
@@ -33,7 +33,7 @@
                                 {{ submenu_item.title }}
                             </a>
                             {% elsif submenu_item.external-link %}
-                            <a href="{{ submenu_item.external-link }}">
+                            <a href="{{ submenu_item.external-link }}" target="_blank" rel="noopener noreferrer">
                                 {{ submenu_item.title }}
                             </a>
                             {% else %}
@@ -92,7 +92,7 @@
                                 {{ menu_item.title }}
                             </a>
                         {% elsif menu_item.external-link %}
-                            <a href="{{ menu_item.external-link }}">
+                            <a href="{{ menu_item.external-link }}" target="_blank" rel="noopener noreferrer">
                                 {{ menu_item.title }}
                             </a>
                         {% else %}
@@ -107,7 +107,7 @@
                                     {{ submenu_item.title }}
                                 </a>
                                 {% elsif submenu_item.external-link %}
-                                <a href="{{ submenu_item.external-link }}">
+                                <a href="{{ submenu_item.external-link }}" target="_blank" rel="noopener noreferrer">
                                     {{ submenu_item.title }}
                                 </a>
                                 {% else %}
