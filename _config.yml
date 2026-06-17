@@ -25,7 +25,7 @@ nav-menu:
       - title: Search Database
         link: databaseembed
   - title: Visualizations
-    link: map
+    link: visualizations
   - title: About the Almanacs
     link: almanacdetails
   - title: Project Details
