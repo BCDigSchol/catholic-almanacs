@@ -50,6 +50,11 @@ body {
     font-size: 1.2em;
 }
 
+ul.compact-list li {
+    margin: 1px 1px 1px 1px !important;
+    padding: 1px 1px 1px 1px !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: $title-font-family, $title-font-style !important;
 }
