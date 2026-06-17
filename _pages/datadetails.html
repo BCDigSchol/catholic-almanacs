@@ -16,7 +16,7 @@ show-title: true
 <li><strong>consecrated life institutions</strong> like convents, monestaries, and other religious communities;</li></ul>
       <p>In our first iteration of the 1870 almanac, we opted not to encode the occasional layman's religious or charitable society when it had no location information.  We might revisit these societies in the future.</p>
 <p>The fields we have for basic institution information are as follows:</p>
-<ul>
+<ul class="compact-list">
   <li>instID:</li>
   <li>type: what the institution is identified as in the almanac, such as a "church" or "school."  The almanac provides about forty of these terms, so, for counting purposes, these types all fall under one of five instituion "functions": religious, educational, healthcare, charitiable, or consecrecated life</li>
   <li>instName: what the institution is called in the almanac, such as "St. Mary's" or "St. Aloysius's."</li>
@@ -29,7 +29,7 @@ show-title: true
   <p>When the town changed names or is defunct (which we identify as part of our coordinate process, explained below), our team does additional research to find its current name or location so that we can assign it a coordinate.  In the future, we hope to create a process where those who are more knowledgeable about specific regions can send us updated location information to make our data as accurate as possible.</p>
 <p>We record the information given in the almanac, the "original" information, in columns marked with "_orig."  We record information we research, the updated information, in columns marked with "_reg"</p>
 <p>The fields we have for locations are as follows:</p>
-<ul>
+<ul class="compact-list">
   <li>placeName: any address or place information provided by the almanac, ranging from "the corner of 4th and Front Streets" to "near the school house."</li>
   <li>region: any place information provided by the almanac that is not as specific as an address, county, or city, usually a valley or other topographical feature in the West.</li>
   <li>county_orig: the original county listed in the almanac, if given (usually in more rural areas)</li>
@@ -47,7 +47,7 @@ show-title: true
 
 <h2>Encoding Individuals</h2>
 <p>We record the individuals named in the almanac with the following information:</p>
-<ul>
+<ul class="compact-list">
   <li>persTitle: the title given to the individual in the almanac, most often "Rev."</li>
   <li>persName: the exact spelling of the individual's full name, as written in the almanac, including abbreviations, punctuation, misspellings, etc.</li>
   <li>persSuffix: any suffix assigned to an individual, usually a religious order, such as S.J.</li>
@@ -64,7 +64,7 @@ show-title: true
 
 <h2>Encoding Groups of People</h2>
 <p>In addition to individuals, we record the groups of people named in the almanac, usually religious orders.  We identify these groups with the following information:</p>
-<ul>
+<ul class="compact-list">
   <li>member: the unnamed people, as opposed to named individuals, that serve an institution, such as "twelve sisters" or "four teachers."</li>
   <li>memberType: the category of unnamed people, as opposed to named individuals, that serve an institution.  So far, our types include "priest," "religious," "student," "teacher," "child," "patient," and "layperson."  Some one-off groups of people named in the almanac as serving an institution do not receive a type but are still recorded as members.</li>
   <li>affiliated: the description the almanac provides of other groups (usually religious orders) serving an institution, such as "Franciscan fathers" or "Dominican sisters."</li>
