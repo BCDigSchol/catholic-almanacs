@@ -18,10 +18,10 @@ show-title: true
 <p>The fields we have for basic institution information are as follows:</p>
 <ul class="compact-list">
   <li>instID:</li>
-  <li>type: what the institution is identified as in the almanac, such as a "church" or "school."  The almanac provides about forty of these terms, so, for counting purposes, these types all fall under one of five instituion "functions": religious, educational, healthcare, charitiable, or consecrecated life</li>
-  <li>instName: what the institution is called in the almanac, such as "St. Mary's" or "St. Aloysius's."</li>
-  <li>language: if a language other than English is given for that institution, most often "German," it is recorded here. Sometimes, the language seems to refer to a racial group rather than a language community, such as "Indian."  The almanac's original language is retained.</li>
-  <li>instNote: additional, loose information about an institution, such as notes about the building or its history</li>
+  <li><strong>type:</strong> what the institution is identified as in the almanac, such as a "church" or "school."  The almanac provides about forty of these terms, so, for counting purposes, these types all fall under one of five instituion "functions": religious, educational, healthcare, charitiable, or consecrecated life</li>
+  <li><strong>instName:</strong> what the institution is called in the almanac, such as "St. Mary's" or "St. Aloysius's."</li>
+  <li><strong>language:</strong> if a language other than English is given for that institution, most often "German," it is recorded here. Sometimes, the language seems to refer to a racial group rather than a language community, such as "Indian."  The almanac's original language is retained.</li>
+  <li><strong>instNote:</strong> additional, loose information about an institution, such as notes about the building or its history</li>
 </ul>
 
 <h2>Encoding Locations</h2>
@@ -30,14 +30,14 @@ show-title: true
 <p>We record the information given in the almanac, the "original" information, in columns marked with "_orig."  We record information we research, the updated information, in columns marked with "_reg"</p>
 <p>The fields we have for locations are as follows:</p>
 <ul class="compact-list">
-  <li>placeName: any address or place information provided by the almanac, ranging from "the corner of 4th and Front Streets" to "near the school house."</li>
-  <li>region: any place information provided by the almanac that is not as specific as an address, county, or city, usually a valley or other topographical feature in the West.</li>
-  <li>county_orig: the original county listed in the almanac, if given (usually in more rural areas)</li>
-  <li>county_reg: the county that institution is in today, which is occasionally different, if identified (sometimes only marked if counties in the dioceses changed)</li>
-  <li>city_orig: the original city name listed in the almanac, if given.</li>
-  <li>city_reg: the city that location is in today, which is sometimes different. If the original city is a misspelling, the correct spelling is shown here.  If the town is defunct and no replacement has sprung up, the current city is left blank.</li>
- <li>state_orig: the original state listed in the almanac</li>
-  <li>state_reg: the state that location is in today, which is very rarely different (usually in Western territories-turned-states and West Virginia vs. Virginia)</li>
+  <li><strong>placeName:</strong> any address or place information provided by the almanac, ranging from "the corner of 4th and Front Streets" to "near the school house."</li>
+  <li><strong>region:</strong> any place information provided by the almanac that is not as specific as an address, county, or city, usually a valley or other topographical feature in the West.</li>
+  <li><strong>county_orig:</strong> the original county listed in the almanac, if given (usually in more rural areas)</li>
+  <li><strong>county_reg:</strong> the county that institution is in today, which is occasionally different, if identified (sometimes only marked if counties in the dioceses changed)</li>
+  <li><strong>city_orig:</strong> the original city name listed in the almanac, if given.</li>
+  <li><strong>city_reg:</strong> the city that location is in today, which is sometimes different. If the original city is a misspelling, the correct spelling is shown here.  If the town is defunct and no replacement has sprung up, the current city is left blank.</li>
+ <li><strong>state_orig:</strong> the original state listed in the almanac</li>
+  <li><strong>state_reg:</strong> the state that location is in today, which is very rarely different (usually in Western territories-turned-states and West Virginia vs. Virginia)</li>
 </ul>
 
 <h3>Adding Coordinates</h3>
@@ -48,11 +48,11 @@ show-title: true
 <h2>Encoding Individuals</h2>
 <p>We record the individuals named in the almanac with the following information:</p>
 <ul class="compact-list">
-  <li>persTitle: the title given to the individual in the almanac, most often "Rev."</li>
-  <li>persName: the exact spelling of the individual's full name, as written in the almanac, including abbreviations, punctuation, misspellings, etc.</li>
-  <li>persSuffix: any suffix assigned to an individual, usually a religious order, such as S.J.</li>
-  <li>persRole: the job title given to an individual, such as "superior" or "professor"</li>
-  <li>persNote: any additional information given about an individual, usually that he is "absent" or "of" a certain town.</li>
+  <li><strong>persTitle:</strong> the title given to the individual in the almanac, most often "Rev."</li>
+  <li><strong>persName:</strong> the exact spelling of the individual's full name, as written in the almanac, including abbreviations, punctuation, misspellings, etc.</li>
+  <li><strong>persSuffix:</strong> any suffix assigned to an individual, usually a religious order, such as S.J.</li>
+  <li><strong>persRole:</strong> the job title given to an individual, such as "superior" or "professor"</li>
+  <li><strong>persNote:</strong> any additional information given about an individual, usually that he is "absent" or "of" a certain town.</li>
 </ul>
 <p>We then attempt to give every individual named in the almanac a unique ID so that we can trace that individual's journey, perhaps through different churches and dioceses, over time.  However, our job is complicated by the fact that names are slippery!  Consider the following complications:</p>
   <ul>
@@ -65,10 +65,10 @@ show-title: true
 <h2>Encoding Groups of People</h2>
 <p>In addition to individuals, we record the groups of people named in the almanac, usually religious orders.  We identify these groups with the following information:</p>
 <ul class="compact-list">
-  <li>member: the unnamed people, as opposed to named individuals, that serve an institution, such as "twelve sisters" or "four teachers."</li>
-  <li>memberType: the category of unnamed people, as opposed to named individuals, that serve an institution.  So far, our types include "priest," "religious," "student," "teacher," "child," "patient," and "layperson."  Some one-off groups of people named in the almanac as serving an institution do not receive a type but are still recorded as members.</li>
-  <li>affiliated: the description the almanac provides of other groups (usually religious orders) serving an institution, such as "Franciscan fathers" or "Dominican sisters."</li>
-  <li>order: includes the names of select religious orders serving an institution.  So far, only about 20 specific, known religious orders are identified in this field, though it continues to grow as we learn more and are able to disamiguate specific religious orders serving different US cities.  Thanks to the "order" field, our insitutions can be filtered by the religious orders that serve them, especially when we had have additional histories about that order.</li>
+  <li><strong>member:</strong> the unnamed people, as opposed to named individuals, that serve an institution, such as "twelve sisters" or "four teachers."</li>
+  <li><strong>memberType:</strong> the category of unnamed people, as opposed to named individuals, that serve an institution.  So far, our types include "priest," "religious," "student," "teacher," "child," "patient," and "layperson."  Some one-off groups of people named in the almanac as serving an institution do not receive a type but are still recorded as members.</li>
+  <li><strong>affiliated:</strong> the description the almanac provides of other groups (usually religious orders) serving an institution, such as "Franciscan fathers" or "Dominican sisters."</li>
+  <li><strong>order:</strong> includes the names of select religious orders serving an institution.  So far, only about 20 specific, known religious orders are identified in this field, though it continues to grow as we learn more and are able to disamiguate specific religious orders serving different US cities.  Thanks to the "order" field, our insitutions can be filtered by the religious orders that serve them, especially when we had have additional histories about that order.</li>
 </ul>
 
 <h2>Data Model</h2>
